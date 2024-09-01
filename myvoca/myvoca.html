@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/myvoca/myvoca.css" />
+    <script
+      src="https://kit.fontawesome.com/15df8433ed.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gothic+A1&family=Jua&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;900&family=Jua&family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;900&family=Jua&family=Nanum+Gothic:wght@800&family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="trainheader">
+      <div class="arrowLeftBox">
+        <a href="/index.html">
+          <i class="fa-solid fa-arrow-left"></i>
+        </a>
+        <div class="title">&emsp;내 단어장</div>
+        <div class="theaderrightbox">
+          <i class="fa-solid fa-book"></i>
+          <i class="fa-regular fa-circle-question"></i>
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </div>
+    <div class="helpcontainer">
+      <div class="help">[나만의 단어장 만들기]</div>
+      <div class="space">/</div>
+      <div class="help">
+        '단어'에 일본 단어를 '뜻'에 한국어 뜻을 입력해주세요!
+      </div>
+    </div>
+    <div class="navigationbox">
+      <div class="navigation">
+        <a class="navigationurl" href="/usage/useage.html">이용하기</a>
+      </div>
+    </div>
+    <div class="wordbox">
+      <div class="wordheaderbox">
+        <div class="headerleftbox">
+          <div class="headerbuttonbox">
+            <div class="wordall">모두</div>
+            <div class="japanese">단어</div>
+            <div class="meaning">뜻</div>
+          </div>
+          <i class="fa-solid fa-arrow-rotate-right"></i>
+        </div>
+        <div class="searchandright">
+          <form method="get" class="searchform">
+            <div class="searchbox">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" class="searchinput" placeholder="검색창"
+              required / >
+            </div>
+          </form>
+          <div class="headerrightbox">
+            <div class="inputbuttonbox">
+              <div class="input">추가</div>
+            </div>
+            <div class="quizbuttonbox">
+              <div class="quiz">퀴즈</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wordlistbox">
+        <div class="inputbox">
+          <div class="inputlayerbox">
+            <div class="inputtitle">새로운 단어 추가</div>
+            <br />
+            <br />
+            <div class="inputtextbox">
+              <form class="form-layout" action="">
+                <input
+                  class="input1"
+                  type="text"
+                  placeholder="&ensp;단어"
+                  required
+                />
+                <input
+                  class="input1_1"
+                  type="text"
+                  placeholder="&ensp;뜻"
+                  required
+                />
+
+                <input class="input2" type="submit" value="입력" />
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="addpagebox">
+          <!-- <div class="adddeletebox">
+            <i class="fa-regular fa-circle-xmark"></i>
+            <i class="fa-regular fa-circle-plus"></i>
+          </div> -->
+          <div class="addpage">
+            <div class="vocaonoff">
+              <button class="vocabutton">
+                <i class="fa-regular fa-rectangle-xmark"></i>
+              </button>
+            </div>
+            <div class="wordcontainer">
+              <!-- <div class="wordlinebox"> -->
+              <!-- <div class="wordline">
+                  <div class="japaneseword"></div>
+                  <div class="koreanmeaning"></div>
+                </div>
+                <div class="deletebox">
+                  <button class="deletebutton">
+                    <i class="fa-regular fa-circle-xmark"></i>
+                  </button>
+                </div> -->
+              <!-- </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="quizpagebox">
+          <div class="quizbox">
+            <div class="topbox">
+              <div class="quizja">CLICK</div>
+              <div class="quizko">THE PLAY BUTTON!</div>
+            </div>
+            <div class="bottombox">
+              <div class="playbuttonbox">
+                <button class="playbutton">PLAY</button>
+                <button class="stopbutton">STOP</button>
+              </div>
+              <div class="rightwrongbox">
+                <button class="right">
+                  <i class="fa-regular fa-circle"></i>
+                </button>
+                <button class="wrong"><i class="fa-solid fa-x"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="help.js"></script>
+    <script src="navigation.js"></script>
+    <script src="buttonclick.js"></script>
+    <script src="quiz.js"></script>
+    <script src="cover.js"></script>
+    <script src="addword.js"></script>
+    <script src="search.js"></script>
+    <script src="quizplay.js"></script>
+  </body>
+</html>

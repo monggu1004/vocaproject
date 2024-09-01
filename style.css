@@ -1,0 +1,337 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.mainPage {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  display: flex;
+  justify-content: end;
+  min-height: 3vh;
+  width: 100vw;
+  background-color: rgb(87, 87, 87);
+  box-shadow: 1vw 1vw 2vw rgba(229, 229, 229, 0.772);
+}
+.headerRight {
+  width: 10vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0vw 3vw;
+  padding: 1vw 0vw;
+}
+.fa-circle-question,
+.fa-language,
+.fa-bars {
+  font-size: 1.5vw;
+  color: rgba(155, 155, 155, 0.749);
+}
+
+.logodisplay {
+  width: 100vw;
+  min-height: 10vw;
+  display: flex;
+  justify-content: center;
+}
+.logo {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.logoJapanese {
+  font-size: 3vw;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  font-family: "Noto Sans Japanese";
+  color: rgb(0, 0, 0);
+  text-shadow: 1px 1px 1px rgb(102, 116, 205);
+}
+.logoKorean {
+  font-family: "Noto Sans Korean";
+  font-size: 1.5vw;
+  font-weight: 900;
+  color: black;
+}
+nav {
+  display: none;
+}
+.fa-bars:hover nav,
+nav:hover {
+  display: block;
+  background-color: blueviolet;
+}
+.navigator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(211, 211, 211);
+  box-shadow: 1vw 1vw 2vw rgba(229, 229, 229, 0.772);
+}
+.navi-left {
+  width: 60vw;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1vw;
+  font-weight: 800;
+}
+.coustomerService {
+  height: 100%;
+  position: relative;
+  padding-bottom: 0.5vw;
+  padding-top: 0.5vw;
+}
+.useage,
+.search,
+.myVoca {
+  padding-bottom: 0.5vw;
+  padding-top: 0.5vw;
+}
+.useage:hover,
+.search:hover,
+.myVoca:hover {
+  box-shadow: 0 0.3vw 0 rgb(78, 118, 252);
+}
+.bottomline {
+  border-bottom: 5px solid;
+  margin: 0;
+  padding: 0;
+}
+.coustomerService:hover {
+  color: rgb(78, 118, 252);
+}
+
+.coustomerService:hover .servicecontainer,
+.servicecontainer:hover {
+  color: rgb(78, 118, 252);
+  display: block;
+}
+.servicecontainer {
+  display: none;
+  background-color: rgb(255, 255, 255);
+  border-style: solid;
+  border-color: rgb(214, 214, 214);
+  border-width: 0.2px;
+  border-radius: 2px;
+  width: 15vw;
+  position: absolute;
+  top: 2.6vw;
+}
+.servicecontainer:hover {
+  display: block;
+}
+.introduce:hover,
+.contact:hover {
+  color: rgb(78, 118, 252);
+}
+
+.introduce,
+.contact {
+  font-size: 1vw;
+  height: 4vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-bars {
+  font-size: 1.5vw;
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8vw 1.5vw;
+  cursor: pointer;
+}
+.navigator {
+  position: relative;
+  width: 100vw;
+}
+
+ul {
+  position: absolute;
+  left: 78vw;
+  top: 3.2vw;
+  width: 20vw;
+  height: 45vh;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-style: solid;
+  border-color: rgb(214, 214, 214);
+  border-width: 0.2px;
+  border-radius: 5px;
+}
+li {
+  list-style: none;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+.hidden {
+  display: none;
+}
+.smenu {
+  font-size: 1.5vw;
+  font-weight: bolder;
+}
+a:hover {
+  color: rgb(78, 118, 252);
+}
+
+.quizcontainer {
+  width: 80vw;
+  min-height: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vw;
+  margin-top: 5vw;
+}
+.quiztitle {
+  font-size: 1.5vw;
+  font-weight: 900;
+  width: 80vw;
+  display: flex;
+  justify-content: center;
+}
+.today {
+  width: 80vw;
+  height: 20vh;
+  display: flex;
+  justify-content: space-evenly;
+}
+.wordbox,
+.quizbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30vw;
+  height: 40vh;
+  border-color: rgba(206, 206, 206, 0.676);
+  border-style: solid;
+  border-width: 0.1vw;
+  border-radius: 10px;
+  gap: 0.5vw;
+}
+.todaywordtitle {
+  font-size: 1vw;
+  font-weight: bolder;
+  color: rgb(59, 123, 213);
+}
+.todaywordJA {
+  font-size: 2vw;
+  font-weight: bolder;
+  width: 10vw;
+  height: 4vh;
+  background-color: rgb(233, 239, 248);
+  border-radius: 10px;
+  border: solid 2px rgb(33, 102, 199);
+}
+.todaywordKO {
+  font-size: 1.5vw;
+  font-weight: bolder;
+  font-size: 2vw;
+  font-weight: bolder;
+  width: 10vw;
+  height: 4vh;
+  background-color: rgb(233, 239, 248);
+  border-radius: 10px;
+  border: solid 2px rgb(33, 102, 199);
+}
+
+.todaywordAN {
+  background-color: rgb(59, 123, 213);
+  cursor: pointer;
+
+  width: 7vw;
+  height: 5vh;
+  border-radius: 5px;
+  color: rgb(227, 236, 245);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1vw;
+  font-weight: bolder;
+  gap: 0.5vw;
+}
+.fa-chevron-right {
+  font-size: 1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer {
+  background-color: rgb(228, 228, 228);
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1vw;
+  color: rgb(41, 41, 41);
+  font-weight: bolder;
+}
+.mainhelpcontainer {
+  background-color: rgb(244, 246, 251);
+  width: 30vw;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.154);
+  position: fixed;
+  z-index: 1;
+  top: 15vh;
+  left: 68vw;
+}
+.mainhelp {
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1vw;
+  font-weight: bolder;
+  display: flex;
+  width: 20vw;
+  height: 20vh;
+  justify-content: center;
+  align-items: center;
+}
+.mainspace {
+  width: 1vw;
+  height: 3vh;
+  color: rgb(244, 246, 251);
+}
+.mainspace::after {
+  position: absolute;
+  bottom: 20vh;
+  right: 5vw;
+  width: 0;
+  height: 0;
+  border-left: 1.5vw solid transparent;
+  border-right: 1.5vw solid transparent;
+  border-bottom: 1.5vw solid rgb(244, 246, 251);
+  content: "";
+}

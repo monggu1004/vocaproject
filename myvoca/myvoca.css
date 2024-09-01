@@ -1,0 +1,724 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.trainheader {
+  width: 100vw;
+  height: 15vh;
+  background-color: rgba(45, 96, 247, 0.877);
+  box-shadow: 0px 5px 10px rgba(0, 48, 143, 0.765);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fa-arrow-left,
+.fa-circle-question,
+.fa-bars,
+.fa-book {
+  font-size: 2.5vw;
+  color: white;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.836);
+}
+.fa-arrow-left:hover,
+.fa-circle-question:hover,
+.fa-bars:hover,
+.fa-book:hover {
+  color: rgba(217, 226, 255, 0.952);
+
+  transition: all 100ms ease-in-out;
+}
+.fa-arrow-left:active,
+.fa-bars:active,
+.fa-book:active {
+  text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.836);
+  position: relative;
+  top: 1px;
+}
+.arrowLeftBox {
+  width: 95vw;
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 2.5vw;
+  color: white;
+}
+.theaderrightbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 10vw;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5vw;
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.539);
+}
+.helpcontainer {
+  background-color: rgb(244, 246, 251);
+  width: 30vw;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.154);
+  position: fixed;
+  top: 15vh;
+  left: 68vw;
+}
+.help {
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1vw;
+  font-weight: bolder;
+}
+.space {
+  width: 1vw;
+  height: 3vh;
+  color: rgb(244, 246, 251);
+}
+.space::after {
+  position: absolute;
+  bottom: 20vh;
+  right: 5vw;
+  width: 0;
+  height: 0;
+  border-left: 1.5vw solid transparent;
+  border-right: 1.5vw solid transparent;
+  border-bottom: 1.5vw solid rgb(244, 246, 251);
+  content: "";
+}
+.hidden {
+  display: none;
+}
+.navigationbox {
+  background-color: rgba(162, 190, 255, 0.966);
+  box-shadow: 1px 1px 5px rgba(94, 126, 255, 0.602);
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  display: none;
+  position: fixed;
+  top: 15.5%;
+}
+.navishow {
+  display: block;
+}
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 15vw;
+  height: 10vh;
+}
+.navigation:hover {
+  background-color: rgb(200, 217, 255);
+  transition: all 200ms ease-in-out;
+  border-radius: 10px;
+}
+.navigationurl {
+  font-size: 2vw;
+  font-family: "Nanum Gothic", sans-serif;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+  text-shadow: 1px 1px 1px black;
+}
+.wordbox {
+  width: 100vw;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+}
+.wordheaderbox {
+  width: 100vw;
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.headerleftbox {
+  width: 20vw;
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.headerbuttonbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15vw;
+  height: 15vh;
+}
+.coverbutton {
+  background-color: rgba(231, 230, 230, 0.771);
+}
+.whiteword {
+  color: white;
+}
+
+.japaneseword {
+}
+
+.koreanmeaning {
+}
+.wordall,
+.japanese,
+.meaning {
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: bolder;
+  font-size: 1.2vw;
+  width: 33.3%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fa-arrow-rotate-right {
+  font-size: 1.5vw;
+  margin-left: 1vw;
+}
+.fa-arrow-rotate-right:hover {
+  color: rgba(217, 226, 255, 0.952);
+  transition: all 100ms ease-in-out;
+}
+.fa-arrow-rotate-right:active {
+  text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.836);
+  position: relative;
+  top: 1px;
+  color: rgb(82, 154, 255);
+}
+
+.searchandright {
+  display: flex;
+  justify-content: space-between;
+  width: 55vw;
+}
+.searchbox {
+  display: flex;
+  width: 24vw;
+  display: flex;
+  justify-content: space-between;
+}
+.searchinput {
+  border: solid 4px rgba(54, 103, 251, 0.877);
+  border-radius: 10px;
+  width: 20vw;
+  height: 5vh;
+  font-size: 1vw;
+  font-family: "Nanum Gothic", sans-serif;
+}
+.fa-magnifying-glass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  color: rgba(54, 103, 251, 0.877);
+}
+
+.wordall:hover,
+.japanese:hover,
+.meaning:hover {
+  transition: all 200ms ease-in-out;
+  background-color: rgba(204, 203, 203, 0.775);
+}
+.clickcolor {
+  background-color: rgba(54, 103, 251, 0.877);
+}
+.wordall {
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top: solid;
+  border-left: solid;
+  border-bottom: solid;
+  border-width: 1px;
+  border-color: rgb(209, 209, 209);
+}
+.japanese {
+  border-top: solid;
+  border-bottom: solid;
+  border-width: 1px;
+  border-color: rgb(209, 209, 209);
+}
+.meaning {
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  border-top: solid;
+  border-right: solid;
+  border-bottom: solid;
+  border-width: 1px;
+  border-color: rgb(209, 209, 209);
+}
+.headerrightbox {
+  width: 25vw;
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.quizbuttonbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15vw;
+  height: 15vh;
+}
+.quiz {
+  width: 10vw;
+  height: 7vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: bold;
+  font-size: 1.5vw;
+  color: rgba(54, 103, 251, 0.877);
+  border: solid 4px;
+}
+.quizclickcolor {
+  background-color: rgb(54, 103, 251);
+  color: rgb(255, 255, 255);
+}
+.inputbuttonbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10vw;
+  height: 15vh;
+}
+.input {
+  width: 10vw;
+  height: 7vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: bold;
+  font-size: 1.5vw;
+  color: rgba(54, 103, 251, 0.877);
+  border: solid 4px;
+}
+.inputclickcolor {
+  background-color: rgba(54, 103, 251, 0.877);
+  color: white;
+}
+.quiz .wordlistbox {
+  width: 100vw;
+  height: 70vh;
+}
+.inputbox {
+  width: 40vw;
+  height: 70vh;
+}
+.inputboxnone {
+  display: none;
+}
+.inputlayerbox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.inputtitle {
+  width: 100%;
+  margin-left: 5vw;
+
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+
+  font-size: 2vw;
+  font-weight: bolder;
+  color: rgb(78, 34, 255);
+}
+.inputtextbox {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.input1 {
+  width: 30vw;
+  height: 8vh;
+  background-color: rgb(249, 249, 249);
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 3vh;
+  font-size: 1.5vw;
+  font-weight: bolder;
+  font-family: "Nanum Gothic", sans-serif;
+  outline: none;
+}
+.input1::placeholder {
+  font-size: 1.5vw;
+  font-weight: bolder;
+  color: rgb(205, 205, 205);
+  display: flex;
+  font-family: "Nanum Gothic", sans-serif;
+}
+.input1_1 {
+  width: 30vw;
+  height: 8vh;
+  background-color: rgb(249, 249, 249);
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 3vh;
+  font-size: 1.5vw;
+  font-weight: bolder;
+  font-family: "Nanum Gothic", sans-serif;
+  outline: none;
+}
+.input1_1::placeholder {
+  font-size: 1.5vw;
+  font-weight: bolder;
+  color: rgb(205, 205, 205);
+  display: flex;
+  font-family: "Nanum Gothic", sans-serif;
+}
+.input2 {
+  width: 30vw;
+  height: 8vh;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(78, 34, 255);
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 1.5vw;
+  font-weight: bolder;
+  color: white;
+  margin-top: 2vh;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.wordlistbox {
+  display: flex;
+  justify-content: space-between;
+}
+.addpagebox {
+  width: 50vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.vocaonoff {
+  width: 95%;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.vocabutton {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: white;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.fa-rectangle-xmark {
+  font-size: 2vw;
+  border: none;
+  color: rgba(176, 157, 251, 0.28);
+}
+.fa-rectangle-xmark:hover {
+  color: rgba(161, 138, 253, 0.738);
+}
+.fa-rectangle-xmark:active {
+  color: rgba(251, 117, 124, 0.828);
+}
+.addpage {
+  width: 80%;
+  height: 80%;
+}
+.wordcontainer {
+  width: 100%;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(78, 34, 255, 0.19);
+  border-radius: 20px;
+  padding: 1vw;
+  box-shadow: 1px 5px 10px rgba(127, 81, 255, 0.199);
+  overflow-y: scroll;
+}
+.wordcontainer::-webkit-scrollbar {
+  width: 15px;
+}
+.wordcontainer::-webkit-scrollbar-track {
+  background-color: rgba(202, 202, 202, 0);
+  border-radius: 20px;
+}
+
+.wordcontainer::-webkit-scrollbar-thumb {
+  background-color: rgba(176, 157, 251, 0.251);
+  border-radius: 20px;
+}
+.wordcontainer::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(176, 157, 251, 0.596);
+  border-radius: 20px;
+  transition: all 200ms ease-in-out;
+}
+
+.wordlinebox {
+  display: flex;
+  width: 100%;
+  height: 90px;
+}
+.wordline {
+  width: 80%;
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  border-top-left-radius: 1vw;
+  border-bottom-left-radius: 1vw;
+}
+.japaneseword {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: bolder;
+  font-size: 2vw;
+  padding-left: 20px;
+}
+
+.koreanmeaning {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  align-items: first baseline;
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: bolder;
+  font-size: 1.2vw;
+  padding-left: 20px;
+}
+.deletebox {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top-right-radius: 1vw;
+  border-bottom-right-radius: 1vw;
+  background-color: white;
+}
+.deletebutton {
+  width: 50%;
+  height: 50%;
+  font-size: 2vw;
+  border: none;
+  background-color: rgba(78, 34, 255, 0);
+}
+.fa-circle-xmark:hover {
+  color: rgba(217, 226, 255, 0.952);
+  transition: all 100ms ease-in-out;
+}
+.fa-circle-xmark:active {
+  color: rgba(253, 16, 16, 0.772);
+}
+
+/* .adddeletebox {
+  width: 80%;
+  display: flex;
+  justify-content: end;
+}
+.fa-circle-xmark,
+.fa-circle-plus {
+  font-size: 2vw;
+} */
+
+.quizpagebox {
+  width: 50vw;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.quizbox {
+  width: 80%;
+  height: 80%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.497);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  box-shadow: inset5px 5px 10px;
+}
+
+.topbox {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: rgb(78, 34, 255);
+}
+.quizja {
+  background-color: white;
+  width: 90%;
+  height: 45%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: bolder;
+  font-size: 2vw;
+}
+.quizko {
+  background-color: white;
+  width: 90%;
+  height: 45%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: bolder;
+  font-size: 2vw;
+}
+.bottombox {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.rightwrongbox {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 80%;
+}
+.right {
+  width: 40%;
+  height: 80%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: none;
+}
+.wrong {
+  width: 40%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: none;
+}
+.right:hover,
+.wrong:hover {
+  background-color: rgba(78, 34, 255, 0.122);
+
+  box-shadow: 3px 3px 5px rgba(16, 4, 62, 0.622);
+}
+.right:active {
+  background-color: rgba(34, 89, 255, 0.808);
+
+  box-shadow: 3px 3px 5px rgba(16, 4, 62, 0.622);
+}
+.wrong:active {
+  background-color: rgba(232, 19, 19, 0.842);
+
+  box-shadow: 3px 3px 5px rgba(16, 4, 62, 0.622);
+}
+.fa-circle {
+  font-size: 4vw;
+}
+.fa-x {
+  font-size: 4vw;
+}
+.playbuttonbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  height: 20%;
+}
+.stopbutton {
+  margin-left: 10px;
+  width: 20%;
+  height: 100%;
+  border-radius: 10px;
+  border: none;
+  font-size: 1vw;
+  font-weight: 900;
+  background-color: white;
+  text-shadow: 2px 2px 5px rgba(86, 44, 252, 0.635);
+  transition: all 100ms ease-in-out;
+}
+.playbutton {
+  margin-left: 10px;
+  width: 20%;
+  height: 100%;
+  border-radius: 10px;
+  border: none;
+  font-size: 1vw;
+  font-weight: 900;
+  background-color: white;
+  text-shadow: 2px 2px 5px rgba(86, 44, 252, 0.635);
+  transition: all 100ms ease-in-out;
+}
+.playbutton:hover {
+  text-shadow: 5px 5px 15px rgb(83, 40, 255);
+}
+.playbutton:active {
+  color: rgb(29, 80, 220);
+}
+.stopbutton:hover {
+  text-shadow: 5px 5px 15px rgb(83, 40, 255);
+}
+.stopbutton:active {
+  color: rgb(199, 15, 15);
+}
+.blueback {
+  background-color: rgb(41, 112, 227);
+}
+.redback {
+  background-color: rgb(204, 15, 15);
+}
